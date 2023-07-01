@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+:root {
+    --backgroundColor: #EEE2DE;
+    --buttonOne: #B31312;
+    --buttonTwo: #EA906C;
+    --Headertext: #2B2A4C;
+    --text: #545B77;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'ubuntu';
+    min-height: 100vh;
+    background-color: var(--backgroundColor);
+}
