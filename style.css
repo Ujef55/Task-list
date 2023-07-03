@@ -2,10 +2,12 @@
 
 :root {
     --backgroundColor: #EEE2DE;
-    --buttonOne: #B31312;
-    --buttonTwo: #EA906C;
+    --buttonEdit: #B31312;
+    --buttonDelete: #EA906C;
     --Headertext: #2B2A4C;
     --text: #545B77;
+    --input: #ececec;
+    --ButtonAdd: #42b883;
 }
 
 
@@ -50,13 +52,32 @@ input{
 .editBtn {
     border: none;
     outline: none;
-    background: var(--buttonOne);
+    background: var(--buttonEdit);
     color: azure;
 }
 
 .deleteBtn {
     border: none;
     outline: none;
-    background: var(--buttonTwo);
+    background: var(--buttonDelete);
     color: azure;
+}
+
+#input {
+    flex: 1 1 0%;
+    background-color: var(--input);
+    border-radius: 12px;
+    padding: 16px;
+    margin-right: 16px;
+    color: var(--text);
+    font-size: 16px;
+}
+
+#submit-button {
+    background-color: var(--ButtonAdd);
+    color: var(--input);
+    font-size: 16px;
+    font-weight: 700;
+    width: 100px;
+    border-radius: 12px;
 }
