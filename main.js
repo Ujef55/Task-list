@@ -26,8 +26,31 @@ deleteButton.addEventListener('click', () => {
 // for create new list item
 function addListItem() {
     let inputValue = input.value;
-    console.log(inputValue);
-}
+
+    if (inputValue === '') {
+        alert('Please add task');
+        return;
+    }
+  
+    // Main div with class name task
+    const mainDiv = document.createElement('div');
+    mainDiv.classList.add('task');
+
+    // another div inside the mainDiv with class name content 
+    const div = document.createElement('div');
+    div.classList.add('content');
+
+    // ul with id 'ul'
+    const ul = document.createElement('ul');
+    ul.id('ul');
+
+    // appending div into the mainDiv
+    mainDiv.appendChild(div);
+  
+    // Clear the input value
+    input.value = '';
+  }
+  
 
 // for edit list item
 function editListItem() {
