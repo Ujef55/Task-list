@@ -1,4 +1,5 @@
-const input = document.querySelector('#task-form');
+let input = document.querySelector('#input');
+const ul = document.querySelector('#ul');
 const addButton = document.querySelector('#submit-button');
 const editButton = document.querySelector('.editBtn');
 const deleteButton = document.querySelector('.deleteBtn');
@@ -24,7 +25,8 @@ deleteButton.addEventListener('click', () => {
 
 // for create new list item
 function addListItem() {
-    console.log('Add button was clicked');
+    let inputValue = input.value;
+    console.log(inputValue);
 }
 
 // for edit list item
