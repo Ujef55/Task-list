@@ -154,7 +154,7 @@ main {
 }
 
 
-ul {
+#ul {
     list-style-type: none;
     margin-left: -40px;
 }
