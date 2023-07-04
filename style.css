@@ -2,7 +2,7 @@
 
 :root {
     --backgroundColor: #f7f7f7;
-    --buttonEdit: #008000;
+    --buttonEdit: #c8cec8;
     --buttonDelete: #FA3E3E;
     --Headertext: #2B2A4C;
     --text: #e8e8e8;
@@ -66,7 +66,7 @@ input{
     border: none;
     outline: none;
     background: var(--buttonEdit);
-    color: azure;
+    color: var(--input);
     border-radius: 5px;
     cursor: pointer;
     width: 80px;
@@ -138,7 +138,7 @@ main {
 }
 
 .my-task-text {
-    background-color: var(--ButtonAdd);
+    background-color: var(--Headertext);
     color: var(--text);
 }
 
@@ -146,7 +146,7 @@ main {
 .task {
     display: flex;
     justify-content: space-between;
-    background-color: var(--ButtonAdd);
+    background-color: var(--Headertext);
     padding: 16px;
     margin: 16px;
     border: 1px solid var(--input);
