@@ -3,6 +3,7 @@ const ul = document.querySelector('#ul');
 const addButton = document.querySelector('#submit-button');
 const editButton = document.querySelector('.editBtn');
 const deleteButton = document.querySelector('.deleteBtn');
+const taskList = document.querySelector('#tasks');
 
 
 // EventListener for add button
@@ -13,14 +14,14 @@ addButton.addEventListener('click', (e) => {
 
 
 // EventListener for edit button
-editButton.addEventListener('click', () => {
-    editListItem();
-})
+// editButton.addEventListener('click', () => {
+//     editListItem();
+// })
 
 // EventListener for delete button
-deleteButton.addEventListener('click', () => {
-    deleteListItem();
-})
+// deleteButton.addEventListener('click', () => {
+//     deleteListItem();
+// })
 
 
 // for create new list item
@@ -32,20 +33,18 @@ function addListItem() {
         return;
     }
   
-    // Main div with class name task
+    // Main div
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('task');
 
-    // another div inside the mainDiv with class name content 
-    const div = document.createElement('div');
-    div.classList.add('content');
+    // elementDiv
+    const elementDiv = document.createElement('div');
+    elementDiv.classList.add('content');
+    elementDiv.textContent = inputValue;
 
-    // ul with id 'ul'
-    const ul = document.createElement('ul');
-    ul.id('ul');
-
-    // appending div into the mainDiv
-    mainDiv.appendChild(div);
+    mainDiv.appendChild(elementDiv);
+    taskList.appendChild(mainDiv);
+    
   
     // Clear the input value
     input.value = '';
@@ -53,11 +52,11 @@ function addListItem() {
   
 
 // for edit list item
-function editListItem() {
-    console.log('edit button was clicked');
-}
+// function editListItem() {
+//     console.log('edit button was clicked');
+// }
 
 // for delete list item
-function deleteListItem() {
-    console.log('delete button was clicked');
-}
+// function deleteListItem() {
+//     console.log('delete button was clicked');
+// }
