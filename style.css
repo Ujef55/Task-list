@@ -55,6 +55,13 @@ input{
 }
 
 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    /* width: 90px; */
+    gap: 10px;
+}
+
 .editBtn {
     border: none;
     outline: none;
@@ -62,6 +69,7 @@ input{
     color: azure;
     border-radius: 5px;
     cursor: pointer;
+    width: 80px;
 }
 
 .deleteBtn {
@@ -71,6 +79,7 @@ input{
     color: azure;
     border-radius: 5px;
     cursor: pointer;
+    width: 80px;
 }
 
 #input {
@@ -140,4 +149,10 @@ main {
     padding: 16px;
     border: 1px solid var(--input);
     border-radius: 12px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin-left: -40px;
 }
