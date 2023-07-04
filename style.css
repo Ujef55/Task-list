@@ -138,15 +138,17 @@ main {
 }
 
 .my-task-text {
-    background-color: var(--backgroundColor);
+    background-color: var(--ButtonAdd);
+    color: var(--text);
 }
 
 
 .task {
     display: flex;
     justify-content: space-between;
-    background-color: var(--backgroundColor);
+    background-color: var(--ButtonAdd);
     padding: 16px;
+    margin: 16px;
     border: 1px solid var(--input);
     border-radius: 12px;
 }
