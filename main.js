@@ -14,10 +14,7 @@ form.addEventListener('submit', (e) => {
 //     editListItem();
 // })
 
-// EventListener for delete button
-// deleteButton.addEventListener('click', () => {
-//     deleteListItem();
-// })
+
 
 
 // for create new list item
@@ -70,6 +67,14 @@ function addListItem() {
 
     // clear input value
     input.value = '';
+
+
+    // event listner on delete button
+    deleteButton.addEventListener('click', () => {
+        taskListDiv.remove();
+    })
+
+    
   }
   
 
@@ -78,7 +83,3 @@ function addListItem() {
 //     console.log('edit button was clicked');
 // }
 
-// for delete list item
-// function deleteListItem() {
-//     console.log('delete button was clicked');
-// }
