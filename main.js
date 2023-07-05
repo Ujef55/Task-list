@@ -1,13 +1,9 @@
+let form = document.querySelector('#task-form');
 let input = document.querySelector('#input');
-const ul = document.querySelector('#ul');
-const addButton = document.querySelector('#submit-button');
-const editButton = document.querySelector('.editBtn');
-const deleteButton = document.querySelector('.deleteBtn');
-const taskList = document.querySelector('#tasks');
-
+const taskList = document.querySelector('.tasks');
 
 // EventListener for add button
-addButton.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault(); 
     addListItem();
 })
@@ -26,28 +22,32 @@ addButton.addEventListener('click', (e) => {
 
 // for create new list item
 function addListItem() {
-    let inputValue = input.value;
+
+    const inputValue = input.value;
 
     if (inputValue === '') {
         alert('Please add task');
         return;
     }
-  
-    // Main div
-    const mainDiv = document.createElement('div');
-    mainDiv.classList.add('task');
-
-    // elementDiv
-    const elementDiv = document.createElement('div');
-    elementDiv.classList.add('content');
-    elementDiv.textContent = inputValue;
-
-    mainDiv.appendChild(elementDiv);
-    taskList.appendChild(mainDiv);
     
-  
-    // Clear the input value
+
+    // task list div
+    const taskListDiv = document.createElement('div');
+    taskListDiv.classList.add('task');
+
+    // content div
+    const taskContentDiv = document.createElement('div');
+    taskContentDiv.classList.add('content');
+    taskContentDiv.textContent = inputValue;
+
+    taskListDiv.appendChild(taskContentDiv);
+
+    taskList.appendChild(taskListDiv);
+
+    // clear input value
     input.value = '';
+
+
   }
   
 
