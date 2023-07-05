@@ -35,9 +35,22 @@ function addListItem() {
     const taskListDiv = document.createElement('div');
     taskListDiv.classList.add('task');
 
+    // div for button elements
+    const buttonDiv = document.createElement('div');
+    buttonDiv.classList.add('buttons');
+
     // content div element
     const taskContentDiv = document.createElement('div');
     taskContentDiv.classList.add('content');
+    
+    // edit button and delete button
+    const editButton = document.createElement('button');
+    editButton.classList.add('editBtn');
+    editButton.textContent = 'Edit';
+
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('deleteBtn');
+    deleteButton.textContent = 'Delete';
 
     // input element
     const taskInput = document.createElement('input');
@@ -50,6 +63,10 @@ function addListItem() {
     taskListDiv.appendChild(taskContentDiv);
     taskContentDiv.appendChild(taskInput);
     taskList.appendChild(taskListDiv);
+    taskListDiv.appendChild(buttonDiv);
+    buttonDiv.appendChild(editButton);
+    buttonDiv.appendChild(deleteButton);
+
 
     // clear input value
     input.value = '';
