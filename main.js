@@ -31,23 +31,28 @@ function addListItem() {
     }
     
 
-    // task list div
+    // task list div element
     const taskListDiv = document.createElement('div');
     taskListDiv.classList.add('task');
 
-    // content div
+    // content div element
     const taskContentDiv = document.createElement('div');
     taskContentDiv.classList.add('content');
-    taskContentDiv.textContent = inputValue;
+
+    // input element
+    const taskInput = document.createElement('input');
+    taskInput.type = 'text';
+    taskInput.value = inputValue;
+    taskInput.setAttribute('readonly', 'readonly');
+    taskInput.classList.add('my-task-text');
+
 
     taskListDiv.appendChild(taskContentDiv);
-
+    taskContentDiv.appendChild(taskInput);
     taskList.appendChild(taskListDiv);
 
     // clear input value
     input.value = '';
-
-
   }
   
 
