@@ -25,6 +25,10 @@ body {
     background-color: var(--backgroundColor);
 }
 
+input {
+    font-family: 'ubuntu';
+}
+
 header {
     padding: 32px 16px;
     max-width: 800px;
@@ -134,6 +138,7 @@ main {
 }
 
 .my-task-text {
+    font-size: 16px;
     background-color: var(--Headertext);
     color: var(--text);
 }
