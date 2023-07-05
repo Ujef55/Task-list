@@ -43,11 +43,11 @@ function addListItem() {
     // edit button and delete button
     const editButton = document.createElement('button');
     editButton.classList.add('editBtn');
-    editButton.textContent = 'Edit';
+    editButton.textContent = 'EDIT';
 
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('deleteBtn');
-    deleteButton.textContent = 'Delete';
+    deleteButton.textContent = 'DELETE';
 
     // input element
     const taskInput = document.createElement('input');
@@ -74,12 +74,20 @@ function addListItem() {
         taskListDiv.remove();
     })
 
-    
+    // event listner on edit button
+    editButton.addEventListener('click', () => {
+        if (editButton.textContent === 'EDIT') {
+            taskInput.removeAttribute('readonly');
+            taskInput.focus();
+            editButton.textContent = 'SAVE';
+        } else {
+            taskInput.setAttribute('readonly', 'readonly');
+            editButton.textContent = 'EDIT';
+        }
+    })  
+
   }
   
 
-// for edit list item
-// function editListItem() {
-//     console.log('edit button was clicked');
-// }
+
 
