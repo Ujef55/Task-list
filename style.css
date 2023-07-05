@@ -126,6 +126,7 @@ main {
 }
 
 .task-list h2 {
+    text-align: center;
     font-size: 24px;
     font-weight: 300;
     color: var(--Headertext);
@@ -138,14 +139,13 @@ main {
 }
 
 
-#tasks {
+.tasks .task {
     display: flex;
     justify-content: space-between;
     background-color: var(--Headertext);
+    color: var(--text);
     padding: 16px;
     margin: 16px;
     border: 1px solid var(--input);
     border-radius: 12px;
 }
-
-
