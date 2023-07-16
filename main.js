@@ -71,7 +71,12 @@ function addListItem() {
 
     // event listner on delete button
     deleteButton.addEventListener('click', () => {
-        taskListDiv.remove();
+        if (taskListDiv.className === 'task') {
+            taskListDiv.style.animationPlayState = 'running'
+            taskListDiv.addEventListener('animationend', () => {
+                taskListDiv.remove();
+            })
+        }
     })
 
     // event listner on edit button

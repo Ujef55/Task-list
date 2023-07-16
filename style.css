@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
 
+
+@keyframes remove {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 :root {
     --backgroundColor: #f7f7f7;
     --buttonEdit: #c8cec8;
@@ -154,3 +164,10 @@ main {
     border: 1px solid var(--input);
     border-radius: 12px;
 }
+
+.task {
+    animation-name: remove;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+};
